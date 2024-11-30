@@ -1,0 +1,26 @@
+name: Shell Commands with the Checkout Action
+# Workflow name
+
+on: [push]
+# One or array of events
+
+jobs:
+  run-github-actions:
+    runs-on: ubuntu-latest
+    # Runner OS
+
+    steps:
+      - name: List Files
+        run: |
+          pwd
+          ls -a
+
+      - name: Checkout
+        uses: actions/checkout@v1
+        # 'uses' defines a reference to an action
+
+      - name: List Files After Checkout
+        run: |
+          pwd
+          ls -a
+
