@@ -23,7 +23,7 @@ jobs:
           password: ${{ secrets.DOCKER_TOKEN }}
 
       - name: Build Image
-        run: docker image build -t ing2isimm2024/simplewebdev -f Dockerfile.dev .
+        run: docker image build -t bahamelki/simplewebdev -f Dockerfile.dev .
 
       - name: Push Image
-        run: docker image push ing2isimm2024/simplewebdev
+        run: docker image push bahamelki/simplewebdev
