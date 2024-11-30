@@ -1,0 +1,22 @@
+name: Shell Commands
+# Workflow name
+
+on:
+  push:
+    branches:
+      - dev
+# Trigger on push to the 'dev' branch
+
+jobs:
+  run-shell-command:
+    # Job name
+    runs-on: ubuntu-latest
+    # Runner OS
+    steps:
+      # Array of steps (object): name, run bash command
+      - name: Echo a string
+        run: echo "Starting"
+      - name: Multiline script
+        run: |
+          node -v
+          npm -v
